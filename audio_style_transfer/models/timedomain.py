@@ -273,7 +273,7 @@ def run(content_fname,
         optimizer='bfgs',
         stride=1,
         iterations=300,
-        sr=22050):
+        sr=44100):
 
     frame_size = n_fft // 2
 
