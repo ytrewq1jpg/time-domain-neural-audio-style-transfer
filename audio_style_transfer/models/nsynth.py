@@ -311,7 +311,7 @@ def run(content_fname,
         output_path,
         model,
         iterations=100,
-        sr=16000,
+        sr=44100,
         hop_size=512,
         frame_size=2048,
         alpha=1e-3):
