@@ -10,7 +10,7 @@ import os
 from audio_style_transfer import utils
 
 
-def read_audio_spectum(filename, n_fft=2048, hop_length=512, sr=22050):
+def read_audio_spectum(filename, n_fft=2048, hop_length=512, sr=44100):
     x, sr = librosa.load(filename, sr=sr)
     S = librosa.stft(x, n_fft, hop_length)
     S = np.log1p(np.abs(S)).T
@@ -127,7 +127,7 @@ def run(content_fname,
         stride=1,
         iterations=300,
         phase_iterations=500,
-        sr=22050,
+        sr=44100,
         signal_length=1,  # second
         block_length=1024):
 
